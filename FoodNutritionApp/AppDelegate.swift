@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  FoodNutritionApp
 //
-//  Created by ByteDance on 27/6/25.
+//  Created by Yi Xiang on 27/6/25.
 //
 
 import UIKit

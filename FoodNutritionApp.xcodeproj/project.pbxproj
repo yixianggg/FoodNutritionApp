@@ -6,30 +6,77 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2B06009F2E13E3090029B121 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06009E2E13E3010029B121 /* FoodDetailViewController.swift */; };
+		2B0600A32E13EE1D0029B121 /* NutritionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600A22E13EE130029B121 /* NutritionDetailCell.swift */; };
+		2B0600A52E14CD150029B121 /* FoodSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600A42E14CD150029B121 /* FoodSection.swift */; };
+		2B0600A72E14E91B0029B121 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600A62E14E9150029B121 /* AddFoodViewController.swift */; };
+		2B0600A92E14E9350029B121 /* AddFoodViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600A82E14E92B0029B121 /* AddFoodViewControllerDelegate.swift */; };
+		2B0600AB2E150DA20029B121 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600AA2E150D9E0029B121 /* FoodListCell.swift */; };
+		2B0600AF2E151F1D0029B121 /* ImageNutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600AE2E151F130029B121 /* ImageNutritionViewModel.swift */; };
+		2B0600B12E151F410029B121 /* ImageNutritionViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600B02E151F3A0029B121 /* ImageNutritionViewModelDelegate.swift */; };
+		2B0600B42E1523E50029B121 /* ImageNutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0600B32E1523C60029B121 /* ImageNutritionViewController.swift */; };
+		2B2959042E0E758300BB4E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2958FA2E0E758300BB4E03 /* AppDelegate.swift */; };
+		2B2959052E0E758300BB4E03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2959012E0E758300BB4E03 /* SceneDelegate.swift */; };
+		2B2959072E0E758300BB4E03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B2958FB2E0E758300BB4E03 /* Assets.xcassets */; };
+		2B2959092E0E758300BB4E03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2958FE2E0E758300BB4E03 /* LaunchScreen.storyboard */; };
+		2B29590A2E0E758300BB4E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B2959002E0E758300BB4E03 /* Main.storyboard */; };
+		2B29590C2E0E766C00BB4E03 /* FoodNutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29590B2E0E766600BB4E03 /* FoodNutrition.swift */; };
+		2B29590F2E0E76E300BB4E03 /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B29590E2E0E76DF00BB4E03 /* FoodsResponse.swift */; };
+		2B7C38ED2E1622D4007F53D7 /* ImageUploadViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38EC2E1622C7007F53D7 /* ImageUploadViewControllerDelegate.swift */; };
+		2B7C38EF2E1622DE007F53D7 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38EE2E1622D8007F53D7 /* ImageUploadViewController.swift */; };
+		2B7C38F22E17A7D1007F53D7 /* FoodDetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38F12E17A7CB007F53D7 /* FoodDetailViewControllerDelegate.swift */; };
+		2B7C38F42E17AD45007F53D7 /* ImageNutritionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38F32E17AD3E007F53D7 /* ImageNutritionViewControllerDelegate.swift */; };
+		2B7C38F62E17BC23007F53D7 /* NutritionSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38F52E17BC1E007F53D7 /* NutritionSectionFooterView.swift */; };
+		2B7C38FA2E1BAB44007F53D7 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38F92E1BAB40007F53D7 /* SummaryCell.swift */; };
+		2B7C38FC2E1BAC65007F53D7 /* FoodSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38FB2E1BAC61007F53D7 /* FoodSectionItem.swift */; };
+		2B7C38FF2E1BACB6007F53D7 /* SummaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38FE2E1BACB4007F53D7 /* SummaryData.swift */; };
+		2B7C39062E1CC227007F53D7 /* FoodDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C39052E1CC221007F53D7 /* FoodDetailViewModel.swift */; };
+		2B7C39082E1CCB52007F53D7 /* FoodDetailViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C39072E1CCB47007F53D7 /* FoodDetailViewModelDelegate.swift */; };
+		2BB69CD42E0E98F300F5704A /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD32E0E98EB00F5704A /* FoodListViewModel.swift */; };
+		2BB69CD62E0E994200F5704A /* FoodListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */; };
+		2BB69CD82E0EA54900F5704A /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */; };
+		2BF775F52E0E78DE0013EE62 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F42E0E78D60013EE62 /* APIClient.swift */; };
+		2BF775F72E0E78EA0013EE62 /* CalorieNinjasAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F62E0E78E10013EE62 /* CalorieNinjasAPI.swift */; };
+		2BF775F92E0E78FA0013EE62 /* CalorieNinjasAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F82E0E78EF0013EE62 /* CalorieNinjasAPIProtocol.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		2B06009E2E13E3010029B121 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		2B0600A22E13EE130029B121 /* NutritionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDetailCell.swift; sourceTree = "<group>"; };
+		2B0600A42E14CD150029B121 /* FoodSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSection.swift; sourceTree = "<group>"; };
+		2B0600A62E14E9150029B121 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		2B0600A82E14E92B0029B121 /* AddFoodViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewControllerDelegate.swift; sourceTree = "<group>"; };
+		2B0600AA2E150D9E0029B121 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
+		2B0600AE2E151F130029B121 /* ImageNutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNutritionViewModel.swift; sourceTree = "<group>"; };
+		2B0600B02E151F3A0029B121 /* ImageNutritionViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNutritionViewModelDelegate.swift; sourceTree = "<group>"; };
+		2B0600B32E1523C60029B121 /* ImageNutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNutritionViewController.swift; sourceTree = "<group>"; };
 		2B2958E22E0E757A00BB4E03 /* FoodNutritionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNutritionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2958FA2E0E758300BB4E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B2958FB2E0E758300BB4E03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B2958FC2E0E758300BB4E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2958FD2E0E758300BB4E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B2958FF2E0E758300BB4E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B2959012E0E758300BB4E03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B29590B2E0E766600BB4E03 /* FoodNutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrition.swift; sourceTree = "<group>"; };
+		2B29590E2E0E76DF00BB4E03 /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
+		2B7C38EC2E1622C7007F53D7 /* ImageUploadViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewControllerDelegate.swift; sourceTree = "<group>"; };
+		2B7C38EE2E1622D8007F53D7 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
+		2B7C38F12E17A7CB007F53D7 /* FoodDetailViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewControllerDelegate.swift; sourceTree = "<group>"; };
+		2B7C38F32E17AD3E007F53D7 /* ImageNutritionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNutritionViewControllerDelegate.swift; sourceTree = "<group>"; };
+		2B7C38F52E17BC1E007F53D7 /* NutritionSectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionSectionFooterView.swift; sourceTree = "<group>"; };
+		2B7C38F92E1BAB40007F53D7 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
+		2B7C38FB2E1BAC61007F53D7 /* FoodSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSectionItem.swift; sourceTree = "<group>"; };
+		2B7C38FE2E1BACB4007F53D7 /* SummaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryData.swift; sourceTree = "<group>"; };
+		2B7C39052E1CC221007F53D7 /* FoodDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewModel.swift; sourceTree = "<group>"; };
+		2B7C39072E1CCB47007F53D7 /* FoodDetailViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewModelDelegate.swift; sourceTree = "<group>"; };
+		2BB69CD32E0E98EB00F5704A /* FoodListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel.swift; sourceTree = "<group>"; };
+		2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelDelegate.swift; sourceTree = "<group>"; };
+		2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
+		2BF775F42E0E78D60013EE62 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2BF775F62E0E78E10013EE62 /* CalorieNinjasAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNinjasAPI.swift; sourceTree = "<group>"; };
+		2BF775F82E0E78EF0013EE62 /* CalorieNinjasAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNinjasAPIProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2B2958F42E0E757B00BB4E03 /* Exceptions for "FoodNutritionApp" folder in "FoodNutritionApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 2B2958E12E0E757A00BB4E03 /* FoodNutritionApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2B2958E42E0E757A00BB4E03 /* FoodNutritionApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2B2958F42E0E757B00BB4E03 /* Exceptions for "FoodNutritionApp" folder in "FoodNutritionApp" target */,
-			);
-			path = FoodNutritionApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2B2958DF2E0E757A00BB4E03 /* Frameworks */ = {
@@ -42,10 +89,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0600A02E13EDE70029B121 /* FoodList */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38F92E1BAB40007F53D7 /* SummaryCell.swift */,
+				2B7C38F52E17BC1E007F53D7 /* NutritionSectionFooterView.swift */,
+				2B7C38EC2E1622C7007F53D7 /* ImageUploadViewControllerDelegate.swift */,
+				2B7C38EE2E1622D8007F53D7 /* ImageUploadViewController.swift */,
+				2B0600A82E14E92B0029B121 /* AddFoodViewControllerDelegate.swift */,
+				2B0600A62E14E9150029B121 /* AddFoodViewController.swift */,
+				2B0600AA2E150D9E0029B121 /* FoodListCell.swift */,
+				2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */,
+			);
+			path = FoodList;
+			sourceTree = "<group>";
+		};
+		2B0600A12E13EDF40029B121 /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2B0600A22E13EE130029B121 /* NutritionDetailCell.swift */,
+				2B7C38F12E17A7CB007F53D7 /* FoodDetailViewControllerDelegate.swift */,
+				2B06009E2E13E3010029B121 /* FoodDetailViewController.swift */,
+			);
+			path = FoodDetail;
+			sourceTree = "<group>";
+		};
+		2B0600AC2E151EC00029B121 /* Nutrition Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */,
+				2BB69CD32E0E98EB00F5704A /* FoodListViewModel.swift */,
+			);
+			path = "Nutrition Tracker";
+			sourceTree = "<group>";
+		};
+		2B0600AD2E151ED60029B121 /* Image Nutrition Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				2B0600B02E151F3A0029B121 /* ImageNutritionViewModelDelegate.swift */,
+				2B0600AE2E151F130029B121 /* ImageNutritionViewModel.swift */,
+			);
+			path = "Image Nutrition Scanner";
+			sourceTree = "<group>";
+		};
+		2B0600B22E15238A0029B121 /* ImageNutrition */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38F32E17AD3E007F53D7 /* ImageNutritionViewControllerDelegate.swift */,
+				2B0600B32E1523C60029B121 /* ImageNutritionViewController.swift */,
+			);
+			path = ImageNutrition;
+			sourceTree = "<group>";
+		};
 		2B2958D92E0E757A00BB4E03 = {
 			isa = PBXGroup;
 			children = (
-				2B2958E42E0E757A00BB4E03 /* FoodNutritionApp */,
+				2B2959032E0E758300BB4E03 /* FoodNutritionApp */,
 				2B2958E32E0E757A00BB4E03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +155,74 @@
 				2B2958E22E0E757A00BB4E03 /* FoodNutritionApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2B2959032E0E758300BB4E03 /* FoodNutritionApp */ = {
+			isa = PBXGroup;
+			children = (
+				2B2958FA2E0E758300BB4E03 /* AppDelegate.swift */,
+				2B2958FB2E0E758300BB4E03 /* Assets.xcassets */,
+				2B2958FC2E0E758300BB4E03 /* Info.plist */,
+				2B2958FE2E0E758300BB4E03 /* LaunchScreen.storyboard */,
+				2B2959002E0E758300BB4E03 /* Main.storyboard */,
+				2B2959012E0E758300BB4E03 /* SceneDelegate.swift */,
+				2B29590D2E0E767100BB4E03 /* Models */,
+				2BF775F12E0E78510013EE62 /* Views */,
+				2BF775F22E0E785B0013EE62 /* ViewModels */,
+				2BF775F32E0E78A60013EE62 /* Services */,
+			);
+			path = FoodNutritionApp;
+			sourceTree = "<group>";
+		};
+		2B29590D2E0E767100BB4E03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38FE2E1BACB4007F53D7 /* SummaryData.swift */,
+				2B7C38FB2E1BAC61007F53D7 /* FoodSectionItem.swift */,
+				2B29590E2E0E76DF00BB4E03 /* FoodsResponse.swift */,
+				2B29590B2E0E766600BB4E03 /* FoodNutrition.swift */,
+				2B0600A42E14CD150029B121 /* FoodSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B7C39042E1CC214007F53D7 /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C39072E1CCB47007F53D7 /* FoodDetailViewModelDelegate.swift */,
+				2B7C39052E1CC221007F53D7 /* FoodDetailViewModel.swift */,
+			);
+			path = FoodDetail;
+			sourceTree = "<group>";
+		};
+		2BF775F12E0E78510013EE62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B0600A02E13EDE70029B121 /* FoodList */,
+				2B0600A12E13EDF40029B121 /* FoodDetail */,
+				2B0600B22E15238A0029B121 /* ImageNutrition */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2BF775F22E0E785B0013EE62 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C39042E1CC214007F53D7 /* FoodDetail */,
+				2B0600AC2E151EC00029B121 /* Nutrition Tracker */,
+				2B0600AD2E151ED60029B121 /* Image Nutrition Scanner */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2BF775F32E0E78A60013EE62 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2BF775F82E0E78EF0013EE62 /* CalorieNinjasAPIProtocol.swift */,
+				2BF775F62E0E78E10013EE62 /* CalorieNinjasAPI.swift */,
+				2BF775F42E0E78D60013EE62 /* APIClient.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +239,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2B2958E42E0E757A00BB4E03 /* FoodNutritionApp */,
 			);
 			name = FoodNutritionApp;
 			packageProductDependencies = (
@@ -122,6 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2959072E0E758300BB4E03 /* Assets.xcassets in Resources */,
+				2B2959092E0E758300BB4E03 /* LaunchScreen.storyboard in Resources */,
+				2B29590A2E0E758300BB4E03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +299,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0600A72E14E91B0029B121 /* AddFoodViewController.swift in Sources */,
+				2B0600AB2E150DA20029B121 /* FoodListCell.swift in Sources */,
+				2B7C38FF2E1BACB6007F53D7 /* SummaryData.swift in Sources */,
+				2B7C39062E1CC227007F53D7 /* FoodDetailViewModel.swift in Sources */,
+				2B2959042E0E758300BB4E03 /* AppDelegate.swift in Sources */,
+				2B29590C2E0E766C00BB4E03 /* FoodNutrition.swift in Sources */,
+				2B7C38ED2E1622D4007F53D7 /* ImageUploadViewControllerDelegate.swift in Sources */,
+				2B06009F2E13E3090029B121 /* FoodDetailViewController.swift in Sources */,
+				2B0600AF2E151F1D0029B121 /* ImageNutritionViewModel.swift in Sources */,
+				2B7C38F42E17AD45007F53D7 /* ImageNutritionViewControllerDelegate.swift in Sources */,
+				2BB69CD42E0E98F300F5704A /* FoodListViewModel.swift in Sources */,
+				2B7C38FA2E1BAB44007F53D7 /* SummaryCell.swift in Sources */,
+				2B7C38FC2E1BAC65007F53D7 /* FoodSectionItem.swift in Sources */,
+				2B0600A32E13EE1D0029B121 /* NutritionDetailCell.swift in Sources */,
+				2B7C38EF2E1622DE007F53D7 /* ImageUploadViewController.swift in Sources */,
+				2BB69CD82E0EA54900F5704A /* FoodListViewController.swift in Sources */,
+				2B29590F2E0E76E300BB4E03 /* FoodsResponse.swift in Sources */,
+				2BF775F72E0E78EA0013EE62 /* CalorieNinjasAPI.swift in Sources */,
+				2B0600A92E14E9350029B121 /* AddFoodViewControllerDelegate.swift in Sources */,
+				2B2959052E0E758300BB4E03 /* SceneDelegate.swift in Sources */,
+				2BF775F52E0E78DE0013EE62 /* APIClient.swift in Sources */,
+				2B0600A52E14CD150029B121 /* FoodSection.swift in Sources */,
+				2BF775F92E0E78FA0013EE62 /* CalorieNinjasAPIProtocol.swift in Sources */,
+				2B0600B12E151F410029B121 /* ImageNutritionViewModelDelegate.swift in Sources */,
+				2B7C38F62E17BC23007F53D7 /* NutritionSectionFooterView.swift in Sources */,
+				2B0600B42E1523E50029B121 /* ImageNutritionViewController.swift in Sources */,
+				2B7C39082E1CCB52007F53D7 /* FoodDetailViewModelDelegate.swift in Sources */,
+				2B7C38F22E17A7D1007F53D7 /* FoodDetailViewControllerDelegate.swift in Sources */,
+				2BB69CD62E0E994200F5704A /* FoodListViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B2958FE2E0E758300BB4E03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B2958FD2E0E758300BB4E03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2B2959002E0E758300BB4E03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B2958FF2E0E758300BB4E03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2B2958F62E0E757B00BB4E03 /* Debug */ = {
@@ -145,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R55VHH3KJL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodNutritionApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -152,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -172,6 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R55VHH3KJL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodNutritionApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -179,6 +397,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

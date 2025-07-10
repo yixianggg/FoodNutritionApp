@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  FoodNutritionApp
 //
-//  Created by ByteDance on 27/6/25.
+//  Created by Yi Xiang on 27/6/25.
 //
 
 import UIKit
@@ -16,7 +16,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // Create new UIWindow
+        let window = UIWindow(windowScene: windowScene)
+        
+        // Initialise API service with key
+        let apiKey = "3DTdKhgOt7DbGLiGRsyu8A==0z7zG2yFXkBhc9sJ"
+        let nutritionService = CalorieNinjasAPI(apiKey: apiKey)
+        
+        // Create ViewModel with service
+        let viewModel = FoodListViewModel(service: nutritionService)
+        
+        // Create root view controller with the ViewModel
+        let foodListVC = FoodListViewController(viewModel: viewModel)
+        
+        // Embed in a navigation controller
+        let navigationController = UINavigationController(rootViewController: foodListVC)
+        
+        // Set the rootViewController and make window visible
+        window.rootViewController = navigationController
+        self.window = window
+        window.makeKeyAndVisible()
+        
+        // API call (for testing)
+//        let api = CalorieNinjasAPI(apiKey: "3DTdKhgOt7DbGLiGRsyu8A==0z7zG2yFXkBhc9sJ")
+//        api.fetchFoods(for: "100g of guava with 50g of watermelon") { result in
+//            switch result {
+//            case .success(let response):
+//                print("Foods: \(response.items)")
+//            case .failure(let error):
+//                print("API error: \(error)")
+//            }
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
