@@ -88,10 +88,10 @@ class FoodListCell: UITableViewCell {
     }
     
     @objc private func quantityTextFieldDidChange() {
-        if let text = quantityTextField.text, let quantity = Double(text), quantity > 0 {
+        let quantity = Double(quantityTextField.text ?? "") ?? 0
+        if quantity > 0 {
             onQuantityFieldEdited?(quantity)
         } else {
-            // Reset to default if invalid
             onQuantityFieldEdited?(0)
         }
     }
@@ -107,12 +107,12 @@ extension FoodListCell: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let text = textField.text, let quantity = Double(text), quantity > 0 else {
-            // Reset to default if invalid
+        let quantity = Double(textField.text ?? "") ?? 0
+        if quantity > 0 {
+            onQuantityFieldDidEndEditing?(quantity)
+        } else {
             textField.text = "100"
             onQuantityFieldDidEndEditing?(100)
-            return
         }
-        onQuantityFieldDidEndEditing?(quantity)
     }
 }
