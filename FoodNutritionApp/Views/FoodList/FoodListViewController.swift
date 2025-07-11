@@ -144,7 +144,6 @@ class FoodListViewController: UIViewController {
 
 extension FoodListViewController: FoodListViewModelDelegate {
     func didUpdateFoods() {
-        self.viewModel.save()
         tableView.reloadData()
         self.didChangeLoadingState(isLoading: false)
     }

@@ -8,9 +8,11 @@
 import Foundation
 
 class FoodListViewModel {
+    
     weak var delegate: FoodListViewModelDelegate?
     
     private(set) var nutritionService: FoodServiceProtocol
+    private(set) var storageService: FoodStorageServiceProtocol
     
     private(set) var dates: [Date] = [] // ordered list of dates (sections)
     private var foodsByDate: [Date: [FoodNutrition]] = [:] // foods grouped by date
@@ -25,8 +27,9 @@ class FoodListViewModel {
         }
     }
     
-    init(service: FoodServiceProtocol) {
-        self.nutritionService = service
+    init(foodService: FoodServiceProtocol, storageService: FoodStorageServiceProtocol) {
+        self.nutritionService = foodService
+        self.storageService = storageService
     }
     
     func searchFoods(query: String, for date: Date? = nil) {
@@ -71,60 +74,84 @@ class FoodListViewModel {
     }
     
     func load() {
-        let defaults = UserDefaults.standard
-        
-        guard let savedData = defaults.data(forKey: "foodSections") else {
-            // No saved data, initialize with today only
-            let today = stripTime(from: Date())
-            dates = [today]
-            foodsByDate[today] = []
-            return
-        }
-        
-        let jsonDecoder = JSONDecoder()
-        
         do {
-            let savedSections = try jsonDecoder.decode([FoodSection].self, from: savedData)
-            //print(savedSections)
+            let savedSections = try storageService.loadFoodSections()
             foodsByDate = Dictionary(uniqueKeysWithValues: savedSections.map { ($0.date, $0.foods) })
-            
-            for (date, foods) in foodsByDate {
-                print("Date: \(date)")
-                for food in foods {
-                    print("  \(food.name): \(food.mutableServingSize)")
-                }
-            }
-            
             dates = savedSections.map { $0.date }
             dates.sort(by: >)
-            print(dates)
         } catch {
             print("Failed to load food sections: \(error)")
-            
             let today = stripTime(from: Date())
             dates = [today]
             foodsByDate[today] = []
         }
-        
         prepareSectionItems()
     }
-    
+
     func save() {
-        let jsonEncoder = JSONEncoder()
         do {
-            let data = try jsonEncoder.encode(sectionsForSaving)
-            // For debugging: print JSON string representation
-            if let jsonString = String(data: data, encoding: .utf8) {
-                print("Saving food sections JSON:\n\(jsonString)")
-            } else {
-                print("Failed to convert saved data to string for debugging")
-            }
-            UserDefaults.standard.set(data, forKey: "foodSections")
+            try storageService.saveFoodSections(sectionsForSaving)
             print("Food sections saved successfully.")
         } catch {
             print("Failed to save food sections: \(error)")
         }
     }
+    
+//    func load() {
+//        let defaults = UserDefaults.standard
+//        
+//        guard let savedData = defaults.data(forKey: "foodSections") else {
+//            // No saved data, initialize with today only
+//            let today = stripTime(from: Date())
+//            dates = [today]
+//            foodsByDate[today] = []
+//            return
+//        }
+//        
+//        let jsonDecoder = JSONDecoder()
+//        
+//        do {
+//            let savedSections = try jsonDecoder.decode([FoodSection].self, from: savedData)
+//            //print(savedSections)
+//            foodsByDate = Dictionary(uniqueKeysWithValues: savedSections.map { ($0.date, $0.foods) })
+//            
+//            for (date, foods) in foodsByDate {
+//                print("Date: \(date)")
+//                for food in foods {
+//                    print("  \(food.name): \(food.mutableServingSize)")
+//                }
+//            }
+//            
+//            dates = savedSections.map { $0.date }
+//            dates.sort(by: >)
+//            print(dates)
+//        } catch {
+//            print("Failed to load food sections: \(error)")
+//            
+//            let today = stripTime(from: Date())
+//            dates = [today]
+//            foodsByDate[today] = []
+//        }
+//        
+//        prepareSectionItems()
+//    }
+//    
+//    func save() {
+//        let jsonEncoder = JSONEncoder()
+//        do {
+//            let data = try jsonEncoder.encode(sectionsForSaving)
+//            // For debugging: print JSON string representation
+//            if let jsonString = String(data: data, encoding: .utf8) {
+//                print("Saving food sections JSON:\n\(jsonString)")
+//            } else {
+//                print("Failed to convert saved data to string for debugging")
+//            }
+//            UserDefaults.standard.set(data, forKey: "foodSections")
+//            print("Food sections saved successfully.")
+//        } catch {
+//            print("Failed to save food sections: \(error)")
+//        }
+//    }
     
     func deleteFood(at indexPath: IndexPath) {
         delegate?.didChangeLoadingState(isLoading: true)
@@ -143,6 +170,7 @@ class FoodListViewModel {
         }
         
         prepareSectionItems()
+        save()
         
         delegate?.didUpdateFoods()
     }
@@ -160,6 +188,7 @@ class FoodListViewModel {
         foodsByDate[date] = foods
         
         prepareSectionItems()
+        save()
         
         delegate?.didUpdateFoods()
     }
@@ -194,6 +223,7 @@ class FoodListViewModel {
         foodsByDate[normalizedDate]?.insert(food, at: 0)
         
         prepareSectionItems()
+        save()
         
         delegate?.didUpdateFoods()
     }
@@ -201,12 +231,6 @@ class FoodListViewModel {
     func numberOfSections() -> Int {
         return dates.count
     }
-
-//    func numberOfRows(in section: Int) -> Int {
-//        guard section >= 0 && section < dates.count else { return 0 }
-//        let date = dates[section]
-//        return foodsByDate[date]?.count ?? 0
-//    }
 
     func food(at indexPath: IndexPath) -> FoodNutrition? {
         let foodIndex = indexPath.row - 1
@@ -245,10 +269,8 @@ class FoodListViewModel {
 //        return nutrients
 //    }
     
-    // New property: array of arrays of FoodSectionItem
     private(set) var sectionItems: [[FoodSectionItem]] = []
 
-    // Call this after loading or updating foodsByDate
     func prepareSectionItems() {
         sectionItems = dates.map { date in
             let foods = foodsByDate[date] ?? []

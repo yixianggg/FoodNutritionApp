@@ -33,6 +33,8 @@
 		2B7C38FF2E1BACB6007F53D7 /* SummaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38FE2E1BACB4007F53D7 /* SummaryData.swift */; };
 		2B7C39062E1CC227007F53D7 /* FoodDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C39052E1CC221007F53D7 /* FoodDetailViewModel.swift */; };
 		2B7C39082E1CCB52007F53D7 /* FoodDetailViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C39072E1CCB47007F53D7 /* FoodDetailViewModelDelegate.swift */; };
+		2B8764CF2E20ECD10082CE73 /* FoodStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8764CE2E20ECCE0082CE73 /* FoodStorageService.swift */; };
+		2B8764D12E20ECDD0082CE73 /* FoodStorageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8764D02E20ECD50082CE73 /* FoodStorageServiceProtocol.swift */; };
 		2BB69CD42E0E98F300F5704A /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD32E0E98EB00F5704A /* FoodListViewModel.swift */; };
 		2BB69CD62E0E994200F5704A /* FoodListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */; };
 		2BB69CD82E0EA54900F5704A /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */; };
@@ -70,6 +72,8 @@
 		2B7C38FE2E1BACB4007F53D7 /* SummaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryData.swift; sourceTree = "<group>"; };
 		2B7C39052E1CC221007F53D7 /* FoodDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewModel.swift; sourceTree = "<group>"; };
 		2B7C39072E1CCB47007F53D7 /* FoodDetailViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewModelDelegate.swift; sourceTree = "<group>"; };
+		2B8764CE2E20ECCE0082CE73 /* FoodStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStorageService.swift; sourceTree = "<group>"; };
+		2B8764D02E20ECD50082CE73 /* FoodStorageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStorageServiceProtocol.swift; sourceTree = "<group>"; };
 		2BB69CD32E0E98EB00F5704A /* FoodListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel.swift; sourceTree = "<group>"; };
 		2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelDelegate.swift; sourceTree = "<group>"; };
 		2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				2BF775F12E0E78510013EE62 /* Views */,
 				2BF775F22E0E785B0013EE62 /* ViewModels */,
 				2BF775F32E0E78A60013EE62 /* Services */,
+				2B8764CD2E20EC8E0082CE73 /* StorageService */,
 			);
 			path = FoodNutritionApp;
 			sourceTree = "<group>";
@@ -193,6 +198,15 @@
 				2B7C39052E1CC221007F53D7 /* FoodDetailViewModel.swift */,
 			);
 			path = FoodDetail;
+			sourceTree = "<group>";
+		};
+		2B8764CD2E20EC8E0082CE73 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				2B8764D02E20ECD50082CE73 /* FoodStorageServiceProtocol.swift */,
+				2B8764CE2E20ECCE0082CE73 /* FoodStorageService.swift */,
+			);
+			path = StorageService;
 			sourceTree = "<group>";
 		};
 		2BF775F12E0E78510013EE62 /* Views */ = {
@@ -305,7 +319,9 @@
 				2B7C39062E1CC227007F53D7 /* FoodDetailViewModel.swift in Sources */,
 				2B2959042E0E758300BB4E03 /* AppDelegate.swift in Sources */,
 				2B29590C2E0E766C00BB4E03 /* FoodNutrition.swift in Sources */,
+				2B8764D12E20ECDD0082CE73 /* FoodStorageServiceProtocol.swift in Sources */,
 				2B7C38ED2E1622D4007F53D7 /* ImageUploadViewControllerDelegate.swift in Sources */,
+				2B8764CF2E20ECD10082CE73 /* FoodStorageService.swift in Sources */,
 				2B06009F2E13E3090029B121 /* FoodDetailViewController.swift in Sources */,
 				2B0600AF2E151F1D0029B121 /* ImageNutritionViewModel.swift in Sources */,
 				2B7C38F42E17AD45007F53D7 /* ImageNutritionViewControllerDelegate.swift in Sources */,

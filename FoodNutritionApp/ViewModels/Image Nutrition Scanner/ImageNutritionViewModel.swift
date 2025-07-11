@@ -101,7 +101,6 @@ class ImageNutritionViewModel {
     
     private(set) var sectionItems: [[FoodSectionItem]] = []
 
-    // Call this after loading or updating foodsByDate
     private func prepareSectionItems() {
         var items: [FoodSectionItem] = nutritionItems.map { .food($0) }
         

@@ -22,12 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create new UIWindow
         let window = UIWindow(windowScene: windowScene)
         
-        // Initialise API service with key
+        // Initialise services
         let apiKey = "3DTdKhgOt7DbGLiGRsyu8A==0z7zG2yFXkBhc9sJ"
         let nutritionService = FoodService(apiKey: apiKey)
+        let storageService = FoodStorageService()
         
         // Create ViewModel with service
-        let viewModel = FoodListViewModel(service: nutritionService)
+        let viewModel = FoodListViewModel(foodService: nutritionService, storageService: storageService)
         
         // Create root view controller with the ViewModel
         let foodListVC = FoodListViewController(viewModel: viewModel)
