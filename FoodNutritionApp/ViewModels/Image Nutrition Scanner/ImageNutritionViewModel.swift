@@ -10,11 +10,11 @@ import Foundation
 class ImageNutritionViewModel {
     weak var delegate: ImageNutritionViewModelDelegate?
     
-    private let nutritionService: CalorieNinjasAPIProtocol
+    private let nutritionService: FoodServiceProtocol
     
     private(set) var nutritionItems: [FoodNutrition] = []
     
-    init(service: CalorieNinjasAPIProtocol) {
+    init(service: FoodServiceProtocol) {
         self.nutritionService = service
     }
     

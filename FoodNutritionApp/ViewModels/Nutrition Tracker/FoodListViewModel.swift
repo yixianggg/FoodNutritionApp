@@ -10,7 +10,7 @@ import Foundation
 class FoodListViewModel {
     weak var delegate: FoodListViewModelDelegate?
     
-    private(set) var nutritionService: CalorieNinjasAPIProtocol
+    private(set) var nutritionService: FoodServiceProtocol
     
     private(set) var dates: [Date] = [] // ordered list of dates (sections)
     private var foodsByDate: [Date: [FoodNutrition]] = [:] // foods grouped by date
@@ -25,7 +25,7 @@ class FoodListViewModel {
         }
     }
     
-    init(service: CalorieNinjasAPIProtocol) {
+    init(service: FoodServiceProtocol) {
         self.nutritionService = service
     }
     
@@ -50,8 +50,6 @@ class FoodListViewModel {
                     for item in response.items {
                         self?.addFood(item, for: targetDate)
                     }
-                    
-                    self?.delegate?.didUpdateFoods()
                 case .failure(let error):
                     self?.delegate?.didFailWithError(self?.errorMessage(for: error) ?? "Unknown error")
                 }

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Initialise API service with key
         let apiKey = "3DTdKhgOt7DbGLiGRsyu8A==0z7zG2yFXkBhc9sJ"
-        let nutritionService = CalorieNinjasAPI(apiKey: apiKey)
+        let nutritionService = FoodService(apiKey: apiKey)
         
         // Create ViewModel with service
         let viewModel = FoodListViewModel(service: nutritionService)
@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         
         // API call (for testing)
-//        let api = CalorieNinjasAPI(apiKey: "3DTdKhgOt7DbGLiGRsyu8A==0z7zG2yFXkBhc9sJ")
+//        let api = FoodService(apiKey: "3DTdKhgOt7DbGLiGRsyu8A==0z7zG2yFXkBhc9sJ")
 //        api.fetchFoods(for: "100g of guava with 50g of watermelon") { result in
 //            switch result {
 //            case .success(let response):

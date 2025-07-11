@@ -1,5 +1,5 @@
 //
-//  CalorieNinjasAPI.swift
+//  FoodService.swift
 //  FoodNutritionApp
 //
 //  Created by Yi Xiang on 27/6/25.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CalorieNinjasAPI: CalorieNinjasAPIProtocol {
+class FoodService: FoodServiceProtocol {
     private let apiClient = APIClient()
     private let apiKey: String
     private let fetchFoodsURL = "https://api.calorieninjas.com/v1/nutrition"

@@ -37,8 +37,8 @@
 		2BB69CD62E0E994200F5704A /* FoodListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */; };
 		2BB69CD82E0EA54900F5704A /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */; };
 		2BF775F52E0E78DE0013EE62 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F42E0E78D60013EE62 /* APIClient.swift */; };
-		2BF775F72E0E78EA0013EE62 /* CalorieNinjasAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F62E0E78E10013EE62 /* CalorieNinjasAPI.swift */; };
-		2BF775F92E0E78FA0013EE62 /* CalorieNinjasAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F82E0E78EF0013EE62 /* CalorieNinjasAPIProtocol.swift */; };
+		2BF775F72E0E78EA0013EE62 /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F62E0E78E10013EE62 /* FoodService.swift */; };
+		2BF775F92E0E78FA0013EE62 /* FoodServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF775F82E0E78EF0013EE62 /* FoodServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +74,8 @@
 		2BB69CD52E0E993B00F5704A /* FoodListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelDelegate.swift; sourceTree = "<group>"; };
 		2BB69CD72E0EA53F00F5704A /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		2BF775F42E0E78D60013EE62 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		2BF775F62E0E78E10013EE62 /* CalorieNinjasAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNinjasAPI.swift; sourceTree = "<group>"; };
-		2BF775F82E0E78EF0013EE62 /* CalorieNinjasAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNinjasAPIProtocol.swift; sourceTree = "<group>"; };
+		2BF775F62E0E78E10013EE62 /* FoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		2BF775F82E0E78EF0013EE62 /* FoodServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +218,8 @@
 		2BF775F32E0E78A60013EE62 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2BF775F82E0E78EF0013EE62 /* CalorieNinjasAPIProtocol.swift */,
-				2BF775F62E0E78E10013EE62 /* CalorieNinjasAPI.swift */,
+				2BF775F82E0E78EF0013EE62 /* FoodServiceProtocol.swift */,
+				2BF775F62E0E78E10013EE62 /* FoodService.swift */,
 				2BF775F42E0E78D60013EE62 /* APIClient.swift */,
 			);
 			path = Services;
@@ -316,12 +316,12 @@
 				2B7C38EF2E1622DE007F53D7 /* ImageUploadViewController.swift in Sources */,
 				2BB69CD82E0EA54900F5704A /* FoodListViewController.swift in Sources */,
 				2B29590F2E0E76E300BB4E03 /* FoodsResponse.swift in Sources */,
-				2BF775F72E0E78EA0013EE62 /* CalorieNinjasAPI.swift in Sources */,
+				2BF775F72E0E78EA0013EE62 /* FoodService.swift in Sources */,
 				2B0600A92E14E9350029B121 /* AddFoodViewControllerDelegate.swift in Sources */,
 				2B2959052E0E758300BB4E03 /* SceneDelegate.swift in Sources */,
 				2BF775F52E0E78DE0013EE62 /* APIClient.swift in Sources */,
 				2B0600A52E14CD150029B121 /* FoodSection.swift in Sources */,
-				2BF775F92E0E78FA0013EE62 /* CalorieNinjasAPIProtocol.swift in Sources */,
+				2BF775F92E0E78FA0013EE62 /* FoodServiceProtocol.swift in Sources */,
 				2B0600B12E151F410029B121 /* ImageNutritionViewModelDelegate.swift in Sources */,
 				2B7C38F62E17BC23007F53D7 /* NutritionSectionFooterView.swift in Sources */,
 				2B0600B42E1523E50029B121 /* ImageNutritionViewController.swift in Sources */,
