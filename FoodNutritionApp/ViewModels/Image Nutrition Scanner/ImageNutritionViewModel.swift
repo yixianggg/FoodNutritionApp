@@ -42,7 +42,9 @@ class ImageNutritionViewModel {
         
         guard foodIndex >= 0 && foodIndex < nutritionItems.count else { return }
         nutritionItems[foodIndex].mutableServingSize = quantity
+        
         prepareSectionItems()
+        
         delegate?.didUpdateNutritionItems()
     }
     

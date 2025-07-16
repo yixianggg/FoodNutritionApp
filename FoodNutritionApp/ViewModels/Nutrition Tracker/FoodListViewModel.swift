@@ -154,8 +154,6 @@ class FoodListViewModel {
 //    }
     
     func deleteFood(at indexPath: IndexPath) {
-        delegate?.didChangeLoadingState(isLoading: true)
-        
         let date = dates[indexPath.section]
         let foodIndex = indexPath.row - 1
         guard var foods = foodsByDate[date], foodIndex < foods.count else { return }
@@ -226,6 +224,7 @@ class FoodListViewModel {
         save()
         
         delegate?.didUpdateFoods()
+        delegate?.didChangeLoadingState(isLoading: false)
     }
     
     func numberOfSections() -> Int {
