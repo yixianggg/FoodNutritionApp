@@ -46,6 +46,7 @@ class FoodListViewModel {
                 case .success(let response):
                     if response.items.count == 0 {
                         self?.delegate?.didFailWithError("Unable to find food")
+                        self?.delegate?.didChangeLoadingState(isLoading: false)
                     }
                     
                     let targetDate = self?.stripTime(from: date ?? Date()) ?? Date()
@@ -55,6 +56,7 @@ class FoodListViewModel {
                     }
                 case .failure(let error):
                     self?.delegate?.didFailWithError(self?.errorMessage(for: error) ?? "Unknown error")
+                    self?.delegate?.didChangeLoadingState(isLoading: false)
                 }
             }
         }
